@@ -7,7 +7,7 @@ public class MainMenuScript : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("ARRIVOproject");
+        SceneManager.LoadScene("City");
     }
 
     public void QuitGame() {
