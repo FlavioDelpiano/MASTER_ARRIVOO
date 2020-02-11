@@ -27,13 +27,7 @@ public class SpawnTarget : MonoBehaviour
         random = Random.Range(0, array.Length);
         GameObject clone = Instantiate(generate, array[random].transform.position, array[random].transform.rotation) as GameObject;
         target = clone.transform;
-        //Vector2 origin = clone.transform.position;
-        //Vector2 target = Target.position;
-
-        //
-        // Vector2 direction = new Vector2(target.x - origin.x, target.y - origin.y);
-        // clone.transform.up = direction;
-        // clone.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.up * Time.deltaTime * 100 * 8);
+       
     }
 
    

@@ -7,16 +7,7 @@ public class TargDestroy : MonoBehaviour
 {
     public float plusScore = 10;
 
-    // Start is called before the first frame update
-    private void Start()
-    {
-        
-    }
-
-    private void Update()
-    {
-        
-    }
+    
 
     void OnTriggerEnter(Collider collider)
     {
