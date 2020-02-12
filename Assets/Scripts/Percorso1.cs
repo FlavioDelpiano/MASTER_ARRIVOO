@@ -19,7 +19,7 @@ public class Percorso1 : MonoBehaviour
             for (int i = 0; i < _waypointsRoot.childCount; i++)
                 pathPositions[i] = _waypointsRoot.GetChild(i).position;
 
-            transform.DOPath(pathPositions, _pathDuration, PathType.CatmullRom, PathMode.Full3D, resolution: 30, Color.yellow)
+            transform.DOPath(pathPositions, _pathDuration, PathType.Linear, PathMode.Full3D, resolution: 30, Color.yellow)
                 .SetLookAt(0.01f)
                 .SetEase(Ease.Linear)
                 .SetLoops(-1);
