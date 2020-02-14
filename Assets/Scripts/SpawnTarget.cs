@@ -21,6 +21,7 @@ public class SpawnTarget : MonoBehaviour
     {
         Spawner();
         totalScore = 0;
+        counterScore.text = totalScore.ToString("0");
     }
     public void Spawner()
     {
@@ -35,7 +36,7 @@ public class SpawnTarget : MonoBehaviour
 
     void Update()
     {
-        counterScore.text = totalScore.ToString("0");
+        
         if (img == null)
             Debug.LogError("null image");
 
@@ -76,6 +77,7 @@ public class SpawnTarget : MonoBehaviour
     public void ScoreRulesPlus(float plusScore)
     {
         totalScore += plusScore;
+        counterScore.text = totalScore.ToString("0");
     }
 
     public float GetTotalScore()
