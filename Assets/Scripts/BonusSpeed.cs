@@ -11,7 +11,7 @@ public class BonusSpeed : Bonus
 
 
 
-    // Start is called before the first frame update
+   
     protected override void OnPicked(Collider other)
     {
         base.OnPicked(other);
@@ -45,7 +45,7 @@ public class BonusSpeed : Bonus
 
 
 
-        Debug.Log("fineBonus");
+        //Debug.Log("fineBonus");
         
         other.maxSpeed = normalMaxVelocity;
         

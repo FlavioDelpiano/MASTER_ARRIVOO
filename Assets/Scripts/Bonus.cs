@@ -46,6 +46,6 @@ public class Bonus : MonoBehaviour
     {
         GetComponent<Collider>().enabled = false;
         GetComponent<Renderer>().enabled = false;
-        Debug.Log("Hai preso : " + gameObject.name);
+        //Debug.Log("Hai preso : " + gameObject.name);
     }
 }

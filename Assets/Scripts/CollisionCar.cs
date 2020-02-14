@@ -23,13 +23,13 @@ public class CollisionCar : MonoBehaviour
 
         if (character != null)
         {
-            Debug.Log("hai investito " + gameObject.name);
+            //Debug.Log("hai investito " + gameObject.name);
             character.MultaPlus(multaCar);
         }
 
         if (characterGameObject.name == "Player")
         {
-            Debug.Log("impulso");
+            //Debug.Log("impulso");
 
             character.forwardVelocity = 0f;
             rb.AddForce(-characterGameObject.transform.forward * impulseforward, ForceMode.Impulse);

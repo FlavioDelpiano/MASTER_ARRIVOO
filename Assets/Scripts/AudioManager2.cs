@@ -32,7 +32,7 @@ public class AudioManager2 : MonoBehaviour
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
-            Debug.Log("no theme");
+            //Debug.Log("no theme");
             return;
         }
         s.source.Play();

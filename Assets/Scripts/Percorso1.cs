@@ -26,18 +26,7 @@ public class Percorso1 : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    public void TrafficLightRed() {
-        this.transform.DOPause();
-    }
-
-    public void TrafficLightGreen() {
-        this.transform.DOPlay();
-    }
+    
+  
 
 }

@@ -11,12 +11,12 @@ public class TargDestroy : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        Debug.Log("TargDestroy on trigger enetr " + collider.gameObject.name);
+       // Debug.Log("TargDestroy on trigger enetr " + collider.gameObject.name);
         ThirdPersonCameraController cr = collider.gameObject.GetComponent<ThirdPersonCameraController>();
 
         if (collider.gameObject.name == "Player") 
         {
-            Debug.Log("TDestroying " + this);
+           //Debug.Log("TDestroying " + this);
             gameObject.SetActive(false);
             Camera.main.GetComponent<SpawnTarget>().Spawner();
             Destroy(this.gameObject);
