@@ -30,13 +30,18 @@ public class Percorso1 : MonoBehaviour
         }
     }
 
-    public void PauseAnimation()
+    public void StopAnimation()
     {
         pathAnimation.Pause();
 
     }
+    public void PlayAnimation()
+    {
+        pathAnimation.Play();
 
-    
-  
+    }
+
+
+
 
 }
