@@ -13,7 +13,7 @@ public class Percorso1 : MonoBehaviour
     private Tween pathAnimation;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         if (_waypointsRoot != null && _waypointsRoot.childCount > 0)
         {

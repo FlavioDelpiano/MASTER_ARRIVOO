@@ -11,18 +11,23 @@ using UnityEngine;
         public Transform player;
         public int distanceToPlay = 300;
         private int var = 0;
-        void Start()
+        void Awake()
         {
             pedestrians = GetComponentsInChildren<BoxCollider>();
-            if (((int)Vector3.Distance(player.position, transform.position) - 3) > 15)
+            if (((int)Vector3.Distance(player.position, transform.position) - 3) > distanceToPlay)
                 var = 0;
             else
                 var = 1;
             AnimationState = GetComponentsInChildren<Percorso1>();
         }
+    private void Start()
+    {
+        if (var == 0)
+            DisableFunction();
+    }
 
-        
-        void Update()
+
+    void Update()
         {
             if (((int)Vector3.Distance(player.position, transform.position) - 3) > distanceToPlay && var == 1)
             {
@@ -42,6 +47,7 @@ using UnityEngine;
 
         void DisableFunction()
         {
+            Debug.Log("able");
             foreach (BoxCollider col in pedestrians)
             {
                 col.enabled = false;
@@ -54,6 +60,7 @@ using UnityEngine;
         }
         void AbleFunction()
         {
+            Debug.Log("disable");
             foreach (BoxCollider col in pedestrians)
             {
                 col.enabled = true;
