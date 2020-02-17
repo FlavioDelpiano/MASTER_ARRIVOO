@@ -16,9 +16,11 @@ public class SpawnTarget : MonoBehaviour
     public Vector3 offset;
     public float plusScore = 10, totalScore = 0;
     [SerializeField] Text counterScore;
+    Vector2 pos;
     // Use this for initialization
     void Start()
     {
+        
         Spawner();
         totalScore = 0;
         counterScore.text = totalScore.ToString("0");
@@ -37,21 +39,21 @@ public class SpawnTarget : MonoBehaviour
     void Update()
     {
         
-        if (img == null)
-            Debug.LogError("null image");
+        //if (img == null)
+        //    Debug.LogError("null image");
 
-        if (Camera.main == null)
-            Debug.LogError("Null camera");
+        //if (Camera.main == null)
+        //    Debug.LogError("Null camera");
 
-        if (target == null)
-            Debug.LogError("TargetNull");
+        //if (target == null)
+        //    Debug.LogError("TargetNull");
 
         float minX = img.GetPixelAdjustedRect().width / 2;
         float maxX = Screen.width - minX;
         float minY = img.GetPixelAdjustedRect().height / 2;
         float maxY = Screen.height - minY;
 
-        Vector2 pos = Camera.main.WorldToScreenPoint(target.position+ offset);
+        pos = Camera.main.WorldToScreenPoint(target.position+ offset);
 
         if (Vector3.Dot((target.position - transform.position), transform.forward) < 0)
         {
@@ -70,7 +72,7 @@ public class SpawnTarget : MonoBehaviour
         pos.y = Mathf.Clamp(pos.y, minY, maxY);
 
         img.transform.position = pos;
-        meter.text = ((int)Vector3.Distance(target.position, transform.position)-3).ToString() + "m";
+        meter.text = ((int)Vector3.Distance(target.position, transform.position)-3).ToString();
 
 
     }

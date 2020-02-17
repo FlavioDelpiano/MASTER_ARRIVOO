@@ -9,17 +9,17 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pausedMenuUI;
      
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (GameIsPaused)
-                Resume();
-            else
-                Pause();
+    //void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Space))
+    //    {
+    //        if (GameIsPaused)
+    //            Resume();
+    //        else
+    //            Pause();
         
-        }
-    }
+    //    }
+    //}
 
     public void Resume() {
 
