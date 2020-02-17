@@ -354,10 +354,10 @@ RectTransform:
   m_Father: {fileID: 1241203438}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 288.82, y: -926}
-  m_SizeDelta: {x: -306.10004, y: -199.10002}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 30.248672, y: 947.3165}
+  m_SizeDelta: {x: 322.89996, y: 256.89996}
   m_Pivot: {x: 0.5936863, y: 4.3099046}
 --- !u!114 &531932303
 MonoBehaviour:
@@ -820,10 +820,10 @@ RectTransform:
   m_Father: {fileID: 1241203438}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 521, y: -265}
-  m_SizeDelta: {x: 167.2, y: 64.4}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -124, y: 118.999985}
+  m_SizeDelta: {x: 167.20001, y: 64.399994}
   m_Pivot: {x: 0.6553111, y: 0.36559045}
 --- !u!114 &1287436226
 MonoBehaviour:
@@ -1289,10 +1289,10 @@ RectTransform:
   m_Father: {fileID: 1241203438}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 288.82, y: -712.7201}
-  m_SizeDelta: {x: -306.10004, y: -199.10002}
+  m_AnchoredPosition: {x: 30.248672, y: 746.3165}
+  m_SizeDelta: {x: 322.89996, y: 256.89996}
   m_Pivot: {x: 0.5936863, y: 4.3099046}
 --- !u!114 &1752187197
 MonoBehaviour:
@@ -1446,10 +1446,10 @@ RectTransform:
   m_Father: {fileID: 1241203438}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -431, y: -265}
-  m_SizeDelta: {x: 167.2, y: 64.4}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 198.99998, y: 118.999985}
+  m_SizeDelta: {x: 167.20001, y: 64.399994}
   m_Pivot: {x: 0.6553111, y: 0.36559045}
 --- !u!114 &2011255020
 MonoBehaviour:

@@ -17,6 +17,8 @@ public class FinalScoreManager : MonoBehaviour
 
     public void Start()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         scorenumber = PlayerPrefs.GetFloat("Score", 0);
         score.text = scorenumber.ToString("0");
         
