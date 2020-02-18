@@ -159,7 +159,7 @@ MonoBehaviour:
   stop: 1
   impulseforward: 700
   impulseup: 400
-  aud: {fileID: 0}
+  aud: {fileID: 4451651134070145946, guid: d582c6dac4a48b84192a44243a71f124, type: 3}
 --- !u!1001 &245958623450135017
 PrefabInstance:
   m_ObjectHideFlags: 0
