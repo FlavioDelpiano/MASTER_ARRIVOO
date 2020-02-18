@@ -5,7 +5,7 @@ using UnityEngine;
 public class PedoniCollision : MonoBehaviour
 {
     public float multaPedone = 5 ;
-    public AudioManager2 aud;
+    
 
 
     
@@ -23,7 +23,7 @@ public class PedoniCollision : MonoBehaviour
                 
                 Debug.Log("hai investito " + gameObject.name);
                 character.MultaPlus(multaPedone);
-                aud.Play("urloPedone");
+                
         }
       
 

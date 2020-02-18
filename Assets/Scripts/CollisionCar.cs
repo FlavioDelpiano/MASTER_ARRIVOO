@@ -34,7 +34,7 @@ public class CollisionCar : MonoBehaviour
             character.forwardVelocity = 0f;
             rb.AddForce(-characterGameObject.transform.forward * impulseforward, ForceMode.Impulse);
             rb.AddForce(characterGameObject.transform.up * impulseup, ForceMode.Impulse);
-            aud.Play("clacson1");
+            aud.PlayClacson();
             
         }
     }

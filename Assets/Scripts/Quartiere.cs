@@ -47,7 +47,7 @@ using UnityEngine;
 
         void DisableFunction()
         {
-            Debug.Log("able");
+            //Debug.Log("able");
             foreach (BoxCollider col in pedestrians)
             {
                 col.enabled = false;
@@ -60,7 +60,7 @@ using UnityEngine;
         }
         void AbleFunction()
         {
-            Debug.Log("disable");
+            //Debug.Log("disable");
             foreach (BoxCollider col in pedestrians)
             {
                 col.enabled = true;

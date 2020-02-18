@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4451651134070145947}
-  - component: {fileID: 4451651134070145946}
+  - component: {fileID: 5753880013161739120}
   m_Layer: 0
   m_Name: AudioManger2
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4451651134070145946
+--- !u!114 &5753880013161739120
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,16 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20446c7fb7e1a154b9ca3915298287db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds:
-  - name: clacson2
-    clip: {fileID: 8300000, guid: f65cfaee6c6ad2f43a3af85d8d8da138, type: 3}
-    volume: 1
-    pitch: 1
-    source: {fileID: 0}
-    loop: 0
-  - name: clacson1
+  sound:
+    name: claxon
     clip: {fileID: 8300000, guid: 5ed0a7c3ed143a94ca7c60c87a0a0300, type: 3}
-    volume: 1
+    volume: 0.7
     pitch: 1
     source: {fileID: 0}
     loop: 0
