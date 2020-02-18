@@ -157,8 +157,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   multaCar: 7
   stop: 1
-  impulseforward: 400
-  impulseup: 300
+  impulseforward: 700
+  impulseup: 400
   aud: {fileID: 0}
 --- !u!1001 &245958623450135017
 PrefabInstance:

@@ -61,8 +61,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   multaCar: 7
   stop: 1
-  impulseforward: 400
-  impulseup: 300
+  impulseforward: 700
+  impulseup: 400
   aud: {fileID: 0}
 --- !u!82 &3617405401972393765
 AudioSource:
