@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2124822249989981217}
   - component: {fileID: 7002272713107349528}
   - component: {fileID: 3617405401972393765}
+  - component: {fileID: 8254376661439033166}
   m_Layer: 0
   m_Name: macchina1
   m_TagString: Untagged
@@ -63,7 +64,6 @@ MonoBehaviour:
   stop: 1
   impulseforward: 700
   impulseup: 400
-  aud: {fileID: 5753880013161739120, guid: d582c6dac4a48b84192a44243a71f124, type: 3}
 --- !u!82 &3617405401972393765
 AudioSource:
   m_ObjectHideFlags: 0
@@ -160,6 +160,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &8254376661439033166
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3373281000676707359}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 07d6eae54a77f4c2aa84f1daff2b8b51, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1733737397765584481
 PrefabInstance:
   m_ObjectHideFlags: 0
