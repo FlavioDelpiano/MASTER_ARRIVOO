@@ -13,6 +13,7 @@ public class MalusTime : Bonus
 
         if (!timer) { return; }
 
+        FindObjectOfType<AudioManager2>().Play("malus");
         timer.TimeRulesMinus(timeMinus);
         Destroy(gameObject);
     }

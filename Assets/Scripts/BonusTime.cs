@@ -12,6 +12,7 @@ public class BonusTime : Bonus
         
         if (!timer) { return; }
 
+        FindObjectOfType<AudioManager2>().Play("bonus");
         timer.TimeRulesPlus(timePlus);
         Destroy(gameObject);
     }

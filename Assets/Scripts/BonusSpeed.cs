@@ -23,7 +23,8 @@ public class BonusSpeed : Bonus
         normalMaxVelocity = other1.maxSpeed;
         
         other1.maxSpeed = bonusVelocity;
-        
+
+        FindObjectOfType<AudioManager2>().Play("bonus");
         gameObject.GetComponent<Renderer>().enabled = false;
         gameObject.GetComponent<Collider>().enabled = false;
         StartCoroutine(CountdownToBonus(other1));

@@ -26,6 +26,7 @@ public class MalusSpeed : Bonus
         gameObject.GetComponent<Renderer>().enabled = false;
         gameObject.GetComponent<Collider>().enabled = false;
         StartCoroutine(CountdownToBonus(other1));
+        FindObjectOfType<AudioManager2>().Play("malus");
         
 
         

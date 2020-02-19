@@ -31,14 +31,14 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        PlayTheme("Theme");
+        Play("Theme");
     }
 
-    public void PlayTheme(string name)
+    public void Play(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
-        {
+            {
             //Debug.Log("no theme");
             return; }
             s.source.Play();
