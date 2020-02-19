@@ -6,14 +6,18 @@ using UnityEngine;
     public class Quartiere : MonoBehaviour
     {
         // Start is called before the first frame update
-        public BoxCollider[] pedestrians;
+        public BoxCollider[] boxColliders;
         public Percorso1[] AnimationState;
+        public Bonus[] bonus;
         public Transform player;
+        public CapsuleCollider[] capsuleColliders;
         public int distanceToPlay = 300;
         private int var = 0;
         void Awake()
         {
-            pedestrians = GetComponentsInChildren<BoxCollider>();
+            bonus = GetComponentsInChildren<Bonus>();
+            boxColliders = GetComponentsInChildren<BoxCollider>();
+            capsuleColliders = GetComponentsInChildren<CapsuleCollider>();
             if (((int)Vector3.Distance(player.position, transform.position) - 3) > distanceToPlay)
                 var = 0;
             else
@@ -48,7 +52,7 @@ using UnityEngine;
         void DisableFunction()
         {
             //Debug.Log("able");
-            foreach (BoxCollider col in pedestrians)
+            foreach (BoxCollider col in boxColliders)
             {
                 col.enabled = false;
             }
@@ -57,11 +61,20 @@ using UnityEngine;
                 p.StopAnimation();
 
             }
-        }
+            foreach (Bonus b in bonus)
+
+                b.varUpDown = false;
+
+            foreach (CapsuleCollider c in capsuleColliders)
+
+                c.enabled = false;
+
+
+    }
         void AbleFunction()
         {
             //Debug.Log("disable");
-            foreach (BoxCollider col in pedestrians)
+            foreach (BoxCollider col in boxColliders)
             {
                 col.enabled = true;
             }
@@ -70,6 +83,16 @@ using UnityEngine;
                 p.PlayAnimation();
 
             }
-        }
+            
+            foreach(Bonus b in bonus)
+
+                b.varUpDown = true;
+
+            foreach (CapsuleCollider c in capsuleColliders)
+
+                c.enabled = true;
+
+
     }
+}
 

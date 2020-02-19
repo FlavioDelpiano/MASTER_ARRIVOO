@@ -7,22 +7,25 @@ public class Bonus : MonoBehaviour
      public bool goUp;
     public float speed = 0.25f;
     public float rotationSpeed = 5f;
+    public  bool varUpDown;
 
     private void Start() {
         StartCoroutine(SwitchDirection());
     }
     void Update()
-    {
-        if(goUp)
+    {if (varUpDown == true)
         {
-            transform.position= transform.position + new Vector3(0,1*speed*Time.deltaTime,0);
-        }
-        else
-        {
-            transform.position= transform.position - new Vector3(0,1*speed*Time.deltaTime,0);
-        }
+            if (goUp)
+            {
+                transform.position = transform.position + new Vector3(0, 1 * speed * Time.deltaTime, 0);
+            }
+            else
+            {
+                transform.position = transform.position - new Vector3(0, 1 * speed * Time.deltaTime, 0);
+            }
 
-        transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime, Space.World);
+            transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime, Space.World);
+        }
     }
 
     IEnumerator SwitchDirection()
