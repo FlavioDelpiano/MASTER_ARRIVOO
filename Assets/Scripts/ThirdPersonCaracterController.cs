@@ -52,6 +52,7 @@ public class ThirdPersonCaracterController : MonoBehaviour
 
         if (currentTime == 0)
         {
+            PlayerPrefs.SetInt("FinalState", 1);
             SceneManager.LoadScene("Final");
             PlayerPrefs.SetFloat("Score", Camera.main.GetComponent<SpawnTarget>().totalScore);
         }
@@ -59,6 +60,7 @@ public class ThirdPersonCaracterController : MonoBehaviour
         {
             SceneManager.LoadScene("Final");
             PlayerPrefs.SetFloat("Score", Camera.main.GetComponent<SpawnTarget>().totalScore);
+            PlayerPrefs.SetInt("FinalState", 0);
         }
 
     }

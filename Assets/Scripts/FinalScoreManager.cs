@@ -12,7 +12,9 @@ public class FinalScoreManager : MonoBehaviour
     
     [SerializeField] Text score;
     [SerializeField] Text highscore;
-    
+    [SerializeField] Text finalTime;
+    [SerializeField] Text finalFine;
+
 
 
     public void Start()
@@ -32,7 +34,10 @@ public class FinalScoreManager : MonoBehaviour
         else
             highscore.text = PlayerPrefs.GetFloat("HighScore", 0).ToString();
 
-        
+        if (PlayerPrefs.GetInt("FinalState", 0) == 0)
+            finalTime.enabled = false;
+        if (PlayerPrefs.GetInt("FinalState", 0) == 1)
+            finalFine.enabled = false;
     }
 
 
