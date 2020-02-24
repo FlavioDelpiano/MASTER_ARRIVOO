@@ -23,13 +23,18 @@ public class ThirdPersonCaracterController : MonoBehaviour
     public float multaTotale = 0;
     [SerializeField] Text countdownText;
     [SerializeField] Text counterMultaTotale;
+    [SerializeField] Text TimePlusC;
+    [SerializeField] Text TimeMinusC;
     public int multaMassima = 40;
+    private AudioManager2 aud;
+    private bool timerStart = false;
     
     
 
     private void Start() 
     {
-        
+        TimePlusC.enabled = false;
+        TimeMinusC.enabled = false;
         StartCoroutine(CountdownToStart());
         
     }
@@ -37,7 +42,7 @@ public class ThirdPersonCaracterController : MonoBehaviour
     private void Awake()
     {
 
-        
+        aud = FindObjectOfType<AudioManager2>();
         acceleratePerSec = maxSpeed / timeZerotoMax;
         forwardVelocity = 0;
     }
@@ -62,6 +67,16 @@ public class ThirdPersonCaracterController : MonoBehaviour
             PlayerPrefs.SetFloat("Score", Camera.main.GetComponent<SpawnTarget>().totalScore);
             PlayerPrefs.SetInt("FinalState", 0);
         }
+        if (currentTime <= 10 && timerStart == false)
+        {
+            aud.Play("timer");
+            timerStart = true;
+        }
+
+        if (currentTime > 10)
+            timerStart = false;
+
+
 
     }
 
@@ -114,13 +129,16 @@ public class ThirdPersonCaracterController : MonoBehaviour
 
     public void TimeRulesPlus(float plusTime)
     {
-        TimeRulesMinus(-plusTime);
+        currentTime += plusTime;
+        TimePlusC.enabled = true;
+        StartCoroutine(TimeOfBonusIndicator());
     }
 
     public void TimeRulesMinus(float minusTime)
     {
         currentTime -= minusTime;
-
+        TimeMinusC.enabled = true;
+        StartCoroutine(TimeOfMalusIndicator());
 
     }
 
@@ -128,6 +146,7 @@ public class ThirdPersonCaracterController : MonoBehaviour
     
     IEnumerator CountdownToStart()
     {
+        
         while (currentTime > 0)
         {
            
@@ -143,8 +162,26 @@ public class ThirdPersonCaracterController : MonoBehaviour
 
     }
 
+    IEnumerator TimeOfBonusIndicator()
+    { 
+        yield return new WaitForSeconds(0.5f);
+        TimePlusC.enabled = false;
+        
 
-   
-   
-    
+    }
+    IEnumerator TimeOfMalusIndicator()
+    {
+        yield return new WaitForSeconds(0.5f);
+        TimeMinusC.enabled = false;
+
+
+    }
+
+
+
+
+
+
+
+
 }
