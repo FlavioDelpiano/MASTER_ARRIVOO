@@ -5,21 +5,29 @@ using UnityEngine;
 public class BonusFly : MonoBehaviour
 {
 
-    public int impulseforward = 4000 ;
+    public int impulseforward = 6000 ;
 
-    public int impulseup = 1000;
+    public int impulseup = 2000;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        Rigidbody rb = collision.collider.GetComponent<Rigidbody>();
-        GameObject characterGameObject = collision.collider.gameObject;
+        Debug.Log("bonusfly");
+        Rigidbody rb = other.GetComponent<Rigidbody>();
+        GameObject characterGameObject = other.gameObject;
 
-        if (characterGameObject.tag == "Player")
+
+        if (characterGameObject.name == "Player")
         {
-            Debug.Log("fly");
             rb.AddForce(characterGameObject.transform.forward * impulseforward, ForceMode.Impulse);
             rb.AddForce(characterGameObject.transform.up * impulseup, ForceMode.Impulse);
+            FindObjectOfType<AudioManager2>().Play("boost");
         }
+        
     }
+    
+        
+       
+        
+    
 
 }
