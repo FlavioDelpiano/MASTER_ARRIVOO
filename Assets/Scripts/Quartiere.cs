@@ -1,20 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 
-    public class Quartiere : MonoBehaviour
+public class Quartiere : MonoBehaviour
     {
         // Start is called before the first frame update
         public BoxCollider[] boxColliders;
+        
         public Percorso1[] AnimationState;
         public Bonus[] bonus;
+        public NavMeshAgent[] agents;
         public Transform player;
         public CapsuleCollider[] capsuleColliders;
         public int distanceToPlay = 300;
         private int var = 0;
-        void Awake()
+    void Awake()
         {
+        
+        agents = GetComponentsInChildren<NavMeshAgent>();
             bonus = GetComponentsInChildren<Bonus>();
             boxColliders = GetComponentsInChildren<BoxCollider>();
             capsuleColliders = GetComponentsInChildren<CapsuleCollider>();
@@ -52,22 +57,31 @@ using UnityEngine;
         void DisableFunction()
         {
             //Debug.Log("able");
-            foreach (BoxCollider col in boxColliders)
+            
+        foreach (BoxCollider col in boxColliders)
             {
                 col.enabled = false;
             }
-            foreach (Percorso1 p in AnimationState)
+            
+        foreach (Percorso1 p in AnimationState)
             {
                 p.StopAnimation();
 
             }
-            foreach (Bonus b in bonus)
+            
+        foreach (Bonus b in bonus)
 
                 b.varUpDown = false;
 
-            foreach (CapsuleCollider c in capsuleColliders)
+            
+        foreach (CapsuleCollider c in capsuleColliders)
 
                 c.enabled = false;
+            
+        foreach (NavMeshAgent n in agents)
+
+                n.Stop();
+        
 
 
     }
@@ -91,6 +105,9 @@ using UnityEngine;
             foreach (CapsuleCollider c in capsuleColliders)
 
                 c.enabled = true;
+        foreach (NavMeshAgent n in agents)
+
+            n.Resume();
 
 
     }
