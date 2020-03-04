@@ -170,6 +170,7 @@ GameObject:
   - component: {fileID: 3737705709301403174}
   - component: {fileID: 6725277545774228316}
   - component: {fileID: 5823930720772059920}
+  - component: {fileID: 5108734775312168861}
   m_Layer: 0
   m_Name: Brian_talking
   m_TagString: Untagged
@@ -230,6 +231,21 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &5108734775312168861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397907017408904245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e15e57484b365294aa4f051df0f7aa5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multaPedone: 5
+  impulseforward: 700
+  impulseup: 400
 --- !u!1 &487810270300010100
 GameObject:
   m_ObjectHideFlags: 0

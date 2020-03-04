@@ -6,13 +6,13 @@ public class GrassSquareRallenty : MonoBehaviour
 {
     public float rallentySpeed = 10;
     private float normalSpeed;
+    ThirdPersonCaracterController other1;
     private void OnCollisionEnter(Collision collision)
     {
         
-        ThirdPersonCaracterController other1 = collision.collider.GetComponent<ThirdPersonCaracterController>();
+        other1 = collision.collider.GetComponent<ThirdPersonCaracterController>();
 
-        normalSpeed = other1.maxSpeed;
-        other1.maxSpeed = rallentySpeed;
+        
 
     }
 
@@ -23,4 +23,9 @@ public class GrassSquareRallenty : MonoBehaviour
     
     }
 
+    private void OnCollisionStay(Collision collision)
+    {
+        normalSpeed = other1.maxSpeed;
+        other1.maxSpeed = rallentySpeed;
+    }
 }

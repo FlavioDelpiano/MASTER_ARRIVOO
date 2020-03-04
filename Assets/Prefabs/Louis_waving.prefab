@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 4501569122413869088}
   - component: {fileID: 5832947142516069722}
   - component: {fileID: 4243909019756091699}
+  - component: {fileID: 4417063588744497374}
   m_Layer: 0
   m_Name: Louis_waving
   m_TagString: Untagged
@@ -190,6 +191,21 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &4417063588744497374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586471379781454387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e15e57484b365294aa4f051df0f7aa5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multaPedone: 5
+  impulseforward: 700
+  impulseup: 400
 --- !u!1 &700004830175327421
 GameObject:
   m_ObjectHideFlags: 0

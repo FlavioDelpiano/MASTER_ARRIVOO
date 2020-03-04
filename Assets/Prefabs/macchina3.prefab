@@ -59,7 +59,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f42ee6c61e2b5a049b588a485b2f267f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -67,7 +67,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 0.8031616
+  MinDistance: 4.43902
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -226,11 +226,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3727867377194847105, guid: dd3f8e03c4893426196f5bc399a285bd,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0dda4e12e1ccc457e936918be4e7e560, type: 2}
     - target: {fileID: 6999359838147464989, guid: dd3f8e03c4893426196f5bc399a285bd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2a0d30fd5ed3d42c682f8403da647e9f, type: 2}
+    - target: {fileID: 8376055813574238863, guid: dd3f8e03c4893426196f5bc399a285bd,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 91e7a2e1988db4138b99a191f921e8e2, type: 2}
     - target: {fileID: -6054058774237248251, guid: dd3f8e03c4893426196f5bc399a285bd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -242,16 +252,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 2a0d30fd5ed3d42c682f8403da647e9f, type: 2}
     - target: {fileID: 1711277887553122256, guid: dd3f8e03c4893426196f5bc399a285bd,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 91e7a2e1988db4138b99a191f921e8e2, type: 2}
-    - target: {fileID: 3727867377194847105, guid: dd3f8e03c4893426196f5bc399a285bd,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0dda4e12e1ccc457e936918be4e7e560, type: 2}
-    - target: {fileID: 8376055813574238863, guid: dd3f8e03c4893426196f5bc399a285bd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

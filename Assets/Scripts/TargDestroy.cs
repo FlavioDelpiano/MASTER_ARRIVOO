@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TargDestroy : MonoBehaviour
 {
     public float plusScore = 10;
-
+    
     
 
     void OnTriggerEnter(Collider collider)
@@ -21,6 +21,7 @@ public class TargDestroy : MonoBehaviour
             Camera.main.GetComponent<SpawnTarget>().Spawner();
             Destroy(this.gameObject);
             Camera.main.GetComponent<SpawnTarget>().ScoreRulesPlus(plusScore);
+            FindObjectOfType<AudioManager2>().Play("bonus");
            
            
 

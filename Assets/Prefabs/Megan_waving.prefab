@@ -445,6 +445,7 @@ GameObject:
   - component: {fileID: 4136983003857509236}
   - component: {fileID: 6333054889586193934}
   - component: {fileID: 8671088741993812736}
+  - component: {fileID: 5122804260798764298}
   m_Layer: 0
   m_Name: Megan_waving
   m_TagString: Untagged
@@ -506,6 +507,21 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &5122804260798764298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1095181508275579239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e15e57484b365294aa4f051df0f7aa5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multaPedone: 5
+  impulseforward: 700
+  impulseup: 400
 --- !u!1 &1282535385174401814
 GameObject:
   m_ObjectHideFlags: 0
